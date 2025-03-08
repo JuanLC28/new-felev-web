@@ -1,0 +1,72 @@
+---
+import FacebookIcon from '@icons/Facebook.astro';
+import InstagramIcon from '@icons/Instagram.astro';
+import LinkedInIcon from '@icons/LinkedIn.astro';
+import Container from './Container.astro';
+---
+
+<footer class="bg-primary">
+  <Container>
+    <div class="text-white py-12 px-6 md:py-20 md:px-10 lg:px-0 lg:py-10">
+      <div
+        class="mb-6 flex flex-col gap-6 md:flex-row md:justify-between md:items-center"
+      >
+        <div>
+          <img
+            class="w-32 h-auto mx-auto"
+            src="/images/LOGO FELEV_BLANCO.png"
+            alt="Felev"
+          />
+        </div>
+
+        <div
+          class="flex justify-evenly md:justify-end md:gap-10 items-center md:w-[300px]"
+        >
+          <a
+            class="hover:text-black"
+            href="https://www.facebook.com/felev.agencia"
+            target="_blank"
+          >
+            <FacebookIcon width="25" />
+          </a>
+
+          <a
+            class="hover:text-black"
+            href="https://www.instagram.com/felev.agencia/"
+            target="_blank"
+          >
+            <InstagramIcon width="25" />
+          </a>
+
+          <a
+            class="hover:text-black"
+            href="https://www.linkedin.com/company/felev/about/"
+            target="_blank"
+          >
+            <LinkedInIcon width="25" />
+          </a>
+        </div>
+      </div>
+
+      <p
+        class="text-center font-light text-sm mb-5 border-t border-white pt-3 px-2"
+      >
+        Tu socio en soluciones digitales. Síguenos en <a
+          class="font-medium hover:text-black"
+          href="https://www.facebook.com/felev.agencia"
+          target="_blank">Facebook</a
+        >, <a
+          class="font-medium hover:text-black"
+          href="https://www.instagram.com/felev.agencia/"
+          target="_blank">Instagram</a
+        > y <a
+          class="font-medium hover:text-black"
+          href="https://www.linkedin.com/company/felev/about/"
+          target="_blank">LinkedIn</a
+        >. Para consultas, contáctanos a través de nuestro formulario.
+      </p>
+
+      <p class="text-center font-light text-sm">© 2025 Felev.</p>
+    </div>
+  </Container>
+</footer>

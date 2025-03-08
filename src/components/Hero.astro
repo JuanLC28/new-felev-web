@@ -1,0 +1,52 @@
+---
+import InfoIcon from '@icons/Info.astro';
+import BoxIcon from '@icons/Box.astro';
+import Container from './Container.astro';
+---
+
+<section class="bg-fondo-1">
+  <Container>
+    <div class="py-12 px-8 md:p-20 lg:px-5 xl:py-40 lg:grid lg:grid-cols-2">
+      <div>
+        <h1
+          class="text-center text-4xl md:text-5xl font-semibold mb-5 lg:text-left lg:text-4xl"
+        >
+          Transforma tus ideas en Soluciones digitales Innovadoras
+        </h1>
+
+        <p
+          class="text-center text-base/5 font-light mb-8 md:text-lg lg:text-left"
+        >
+          Impulsa el crecimiento de tu proyecto con <strong
+            class="font-semibold"
+            >soluciones de software innovadoras que aceleran tu transformación
+            digital</strong
+          >.
+        </p>
+
+        <div
+          class="flex flex-col gap-5 mb-20 md:flex-row justify-center items-center lg:justify-normal"
+        >
+          <a
+            href="#"
+            class="w-full md:w-auto bg-primary hover:bg-primary-hover transition-colors text-white font-semibold flex justify-center items-center gap-5 rounded-3xl py-3 px-6 cursor-pointer shadow-xl"
+            ><InfoIcon width="20" />Más información</a
+          >
+          <a
+            href="#"
+            class="w-full md:w-auto bg-white hover:bg-gray-100 transition-colors text-black font-semibold flex justify-center items-center gap-5 rounded-3xl py-3 px-6 cursor-pointer shadow-xl"
+            ><BoxIcon width="20" />Ver servicios</a
+          >
+        </div>
+      </div>
+
+      <div>
+        <img
+          class="w-full md:max-w-sm h-auto mx-auto lg:mr-0"
+          src="/images/banner-hero.webp"
+          alt="Felev"
+        />
+      </div>
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,106 @@
+---
+import Container from './Container.astro';
+---
+
+<section class="bg-white">
+  <Container>
+    <div class="py-10 px-6 lg:px-5 lg:flex lg:gap-10 items-center">
+      <div class="hidden lg:block">
+        <p class="font-light text-gray-400">
+          Empresas disruptivas que confían en nosotros:
+        </p>
+      </div>
+
+      <div class="w-full overflow-hidden">
+        <ul class="w-fit flex items-center slider-animado">
+          <li class="w-56 flex justify-center items-center">
+            <img
+              class="w-28"
+              src="/images/lmi-loam-logo-byn.webp"
+              alt="LMI LOAM"
+            />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img class="w-28" src="/images/pmi-logo-byn.png" alt="PMI" />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img
+              class="w-28"
+              src="/images/lionhungry-logo-byn.png"
+              alt="LionHungry"
+            />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img class="w-28" src="/images/sk7-logo-byn.jpg" alt="SK7" />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img
+              class="w-28"
+              src="/images/lmi-loam-logo-byn.webp"
+              alt="LMI LOAM"
+            />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img class="w-28" src="/images/pmi-logo-byn.png" alt="PMI" />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img
+              class="w-28"
+              src="/images/lionhungry-logo-byn.png"
+              alt="LionHungry"
+            />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img class="w-28" src="/images/sk7-logo-byn.jpg" alt="SK7" />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img
+              class="w-28"
+              src="/images/lmi-loam-logo-byn.webp"
+              alt="LMI LOAM"
+            />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img class="w-28" src="/images/pmi-logo-byn.png" alt="PMI" />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img
+              class="w-28"
+              src="/images/lionhungry-logo-byn.png"
+              alt="LionHungry"
+            />
+          </li>
+
+          <li class="w-56 flex justify-center items-center">
+            <img class="w-28" src="/images/sk7-logo-byn.jpg" alt="SK7" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .slider-animado {
+    animation: slide 30s infinite linear;
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-65%);
+    }
+  }
+</style>

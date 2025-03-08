@@ -1,0 +1,35 @@
+---
+import BarIcon from '@icons/Bar.astro';
+import Container from './Container.astro';
+---
+
+<header class="bg-white">
+  <Container>
+    <div
+      class="p-4 md:py-5 md:px-10 lg:px-0 flex justify-between items-center border-b-2 border-black/5"
+    >
+      <span>
+        <img class="w-24" src="/images/felev-logo-color-1.png" alt="Felev" />
+      </span>
+
+      <span class="text-primary cursor-pointer md:hidden">
+        <BarIcon width="40" />
+      </span>
+
+      <nav class="hidden md:block">
+        <ul class="flex gap-14">
+          <li><a class="font-medium hover:text-primary" href="#top">Inicio</a></li>
+          <li>
+            <a class="font-medium hover:text-primary" href="#servicios">Servicios</a>
+          </li>
+          <li>
+            <a class="font-medium hover:text-primary" href="#proyectos">Proyectos</a>
+          </li>
+          <li>
+            <a class="font-medium hover:text-primary" href="#nosotros">Nosotros</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </Container>
+</header>

@@ -1,0 +1,135 @@
+---
+import WordpressIcon from '@icons/Wordpress.astro';
+import RobotIcon from '@icons/Robot.astro';
+import AndroidIcon from '@icons/Android.astro';
+import LaptopIcon from '@icons/Laptop.astro';
+import ConfigIcon from '@icons/Config.astro';
+import SyncIcon from '@icons/Sync.astro';
+import CodeIcon from '@icons/Code.astro';
+import Container from './Container.astro';
+
+const servicios = [
+  {
+    icon: WordpressIcon,
+    title: 'Diseño de Páginas Web',
+    description:
+      'Creamos sitios web atractivos y funcionales que reflejan tu marca y ofrecen una excelente experiencia de usuario.',
+    backTitle: '¡Haz que tu Marca Brille en Línea!',
+    backDescription: 'Destaca en línea con un sitio web impactante.',
+    backCta: 'Crea Tú Página',
+  },
+  {
+    icon: RobotIcon,
+    title: 'Desarrollo de Chatbots',
+    description:
+      'Implementamos chatbots inteligentes que mejoran la atención al cliente y optimizan las ventas en tu negocio.',
+    backTitle: '¡Revoluciona tu Atención al Cliente!',
+    backDescription: 'Mejora tu atención al cliente con chatbots inteligentes.',
+    backCta: 'Habla con un Bot',
+  },
+  {
+    icon: AndroidIcon,
+    title: 'Aplicaciones Móviles',
+    description:
+      'Desarrollamos aplicaciones móviles nativas y híbridas que conectan a tu empresa con los usuarios en cualquier lugar.',
+    backTitle: '¡Lleva tu App al Siguiente Nivel!',
+    backDescription: '¡Conéctate con tus usuarios hoy mismo!',
+    backCta: 'Descubre Más',
+  },
+  {
+    icon: LaptopIcon,
+    title: 'Aplicaciones Web',
+    description:
+      'Creamos aplicaciones web personalizadas que optimizan procesos y mejoran la eficiencia en tu negocio.',
+    backTitle: '¡Transforma Tu Negocio!',
+    backDescription:
+      'Optimiza tu negocio con nuestras soluciones personalizadas.',
+    backCta: 'Solicita tu Proyecto',
+  },
+  {
+    icon: ConfigIcon,
+    title: 'Consultoría Informática',
+    description:
+      'Ofrecemos asesoría experta para guiarte en decisiones tecnológicas clave y la implementación de soluciones.',
+    backTitle: '¡Toma Decisiones Inteligentes!',
+    backDescription: 'Toma decisiones informadas con nuestra asesoría experta.',
+    backCta: 'Consulta con Expertos',
+  },
+  {
+    icon: SyncIcon,
+    title: 'Integraciones CRM',
+    description:
+      'Conectamos tu CRM con las herramientas que usas a diario para optimizar procesos, mejorar la gestión de clientes y aumentar la eficiencia operativa de tu empresa.',
+    backTitle: '¡Optimiza tu CRM hoy mismo!',
+    backDescription:
+      '¡Transforma la gestión de tus clientes con una integración eficiente y personalizada!',
+    backCta: 'Comienza tu Integración',
+  },
+  {
+    icon: CodeIcon,
+    title: 'Desarrollo de Software',
+    description:
+      'Diseñamos y desarrollamos software a medida que se ajusta a las necesidades específicas de tu empresa.',
+    backTitle: '¡Crea Soluciones a Medida!',
+    backDescription: 'Encuentra la solución perfecta para tu empresa.',
+    backCta: 'Inicia Tu Solución',
+  },
+];
+---
+
+<section id="servicios" class="bg-primary">
+  <Container>
+    <div class="py-12 px-8 md:p-20 lg:px-5">
+      <h2 class="text-white text-center text-2xl font-bold uppercase mb-3">
+        Nuestros servicios
+      </h2>
+
+      <p class="text-white text-center font-light text-sm mb-8 md:text-base">
+        En <strong class="font-semibold">Felev</strong>, diseñamos sitios web
+        atractivos y optimizados, y creamos chatbots personalizados para mejorar
+        la comunicación con tus clientes y potenciar tu presencia digital.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-4 lg:grid-cols-3">
+        {
+          servicios.map((servicio) => (
+            <div class="w-full flex flex-col justify-center border border-white rounded-2xl px-5 py-8 text-white relative overflow-hidden cursor-pointer card-services">
+              <div class="mb-5">
+                <servicio.icon width="45" />
+              </div>
+
+              <h3 class="text-2xl/7 font-bold mb-2">{servicio.title}</h3>
+
+              <p class="font-light text-base/5">{servicio.description}</p>
+
+              <div class="absolute w-full h-full bg-white left-0 flex flex-col justify-center items-center gap-6 p-5 transition-transform card-services-back">
+                <h4 class="text-black text-2xl/6 font-bold text-center">
+                  {servicio.backTitle}
+                </h4>
+                <p class="text-black font-light text-center text-base/5">
+                  {servicio.backDescription}
+                </p>
+                <a
+                  class="bg-black hover:bg-gray-700 text-center text-sm shadow-xl py-3 px-8 rounded-xl font-semibold"
+                  href="#"
+                >
+                  {servicio.backCta}
+                </a>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .card-services-back {
+    top: 100%;
+  }
+
+  .card-services:hover > .card-services-back {
+    transform: translateY(-100%);
+  }
+</style>
