@@ -1,48 +1,21 @@
-# Astro Starter Kit: Basics
+# Página Web para Felev
 
-```sh
-pnpm create astro@latest -- --template basics
-```
+Este proyecto consiste en la creación de una página web moderna y funcional para **Felev**, una empresa que ofrece soluciones digitales innovadoras como el diseño de páginas web, desarrollo de chatbots, aplicaciones móviles, y más. La web está diseñada para mejorar la presencia en línea de Felev y facilitar el acceso a sus servicios y proyectos.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Estructura del Proyecto
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+La página web consta de las siguientes secciones:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Hero:** Sección principal que destaca la propuesta de valor de Felev: transformar ideas en soluciones digitales innovadoras.
+- **Clientes:** Un espacio para mostrar las empresas que confían en los servicios de Felev, con sus logotipos.
+- **Servicios:** Descripción detallada de los servicios que Felev ofrece, como diseño de páginas web, desarrollo de chatbots, aplicaciones móviles, entre otros.
+- **Proyectos:** Sección que destaca algunos proyectos realizados, incluyendo sitios web y chatbots implementados para clientes destacados.
+- **Contacto:** Un formulario para que los usuarios se pongan en contacto con Felev.
+- **Footer:** Información adicional y enlaces a redes sociales, junto con detalles de contacto de Felev.
 
-## 🚀 Project Structure
+## Tecnologías Utilizadas
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Astro**: Un generador de sitios estáticos moderno que facilita la creación de sitios rápidos y optimizados.
+- **Tailwind CSS**: Un framework CSS de utilidad que permite diseñar de forma eficiente y responsiva.
+- **HTML5**: Para la estructura básica de la página.
+- **JavaScript**: Para interactividad y funcionalidades adicionales.

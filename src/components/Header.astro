@@ -6,30 +6,76 @@ import Container from './Container.astro';
 <header class="bg-white">
   <Container>
     <div
-      class="p-4 md:py-5 md:px-10 lg:px-0 flex justify-between items-center border-b-2 border-black/5"
+      class="p-4 md:py-5 md:px-10 lg:px-0 flex justify-between items-center border-b-2 border-black/5 relative"
     >
       <span>
         <img class="w-24" src="/images/felev-logo-color-1.png" alt="Felev" />
       </span>
 
-      <span class="text-primary cursor-pointer md:hidden">
+      <span id="icon-movil" class="text-primary cursor-pointer md:hidden">
         <BarIcon width="40" />
       </span>
 
       <nav class="hidden md:block">
         <ul class="flex gap-14">
-          <li><a class="font-medium hover:text-primary" href="#top">Inicio</a></li>
           <li>
-            <a class="font-medium hover:text-primary" href="#servicios">Servicios</a>
+            <a class="font-medium hover:text-primary" href="#top">Inicio</a>
           </li>
           <li>
-            <a class="font-medium hover:text-primary" href="#proyectos">Proyectos</a>
+            <a class="font-medium hover:text-primary" href="#servicios"
+              >Servicios</a
+            >
           </li>
           <li>
-            <a class="font-medium hover:text-primary" href="#nosotros">Nosotros</a>
+            <a class="font-medium hover:text-primary" href="#proyectos"
+              >Proyectos</a
+            >
+          </li>
+          <li>
+            <a class="font-medium hover:text-primary" href="#contacto"
+              >Contáctanos</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <nav id="menu-movil" class="hidden md:hidden absolute top-full left-0 z-10 w-full">
+        <ul class="flex flex-col text-center bg-white">
+          <li>
+            <a
+              class="block py-3 font-medium hover:bg-primary hover:text-white focus:bg-primary focus:text-white"
+              href="#top">Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-3 font-medium hover:bg-primary hover:text-white focus:bg-primary focus:text-white"
+              href="#servicios">Servicios</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-3 font-medium hover:bg-primary hover:text-white focus:bg-primary focus:text-white"
+              href="#proyectos">Proyectos</a
+            >
+          </li>
+          <li>
+            <a
+              class="block py-3 font-medium hover:bg-primary hover:text-white focus:bg-primary focus:text-white"
+              href="#contacto">Contáctanos</a
+            >
           </li>
         </ul>
       </nav>
     </div>
   </Container>
 </header>
+
+<script>
+  const iconMovil = document.getElementById('icon-movil');
+  const menuMovil = document.getElementById('menu-movil');
+
+  iconMovil?.addEventListener('click', () => {
+    menuMovil?.classList.toggle('hidden');
+  });
+</script>
