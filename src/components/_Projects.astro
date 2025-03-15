@@ -1,0 +1,80 @@
+---
+import Container from './Container.astro';
+
+const projects = [
+  {
+    title: 'Página Web para PMI Lima, Perú',
+    description:
+      'Desarrollamos una página web moderna y funcional para PMI Lima, enfocada en facilitar el acceso a la información sobre sus eventos y servicios.',
+    image: '/images/pagina-web-pmi-lima-peru.jpg',
+  },
+  {
+    title: 'Chatbot para PMI Lima, Perú',
+    description:
+      'Implementamos un chatbot en Facebook y WhatsApp para PMI Lima, diseñado para responder preguntas frecuentes y mejorar la atención al cliente.',
+    image: '/images/chatbot-pmi-lima-peru.jpg',
+  },
+  {
+    title: 'Página Web para LionHungry',
+    description:
+      'Creamos una página web atractiva y fácil de usar para LionHungry, un restaurante especializado en parrillas.',
+    image: '/images/pagina-web-lionhungry.jpg',
+  },
+];
+---
+
+<section id="proyectos" class="bg-white">
+  <Container>
+    <div class="py-12 px-8 md:p-20 lg:px-5 xl:py-40">
+      <h2 class="text-2xl/6 font-bold text-center mb-3 uppercase">Nuestros Proyectos</h2>
+
+    <p class="text-center font-light text-sm mb-7">
+      Descubre algunos de nuestros proyectos destacados, donde mejoramos la
+      presencia digital de nuestros clientes con soluciones innovadoras en
+      diseño web y chatbots.
+    </p>
+
+    <div class="grid auto-rows-fr grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3">
+      {
+        projects.map((project) => (
+          <div class="shadow-xl rounded-2xl overflow-hidden cursor-pointer">
+            <div class="custom-overlay">
+              <img
+                class="w-full aspect-video object-cover"
+                src={project.image}
+                alt={project.title}
+              />
+            </div>
+
+            <div class="py-6 px-8">
+              <h3 class="font-bold text-xl mb-2">{project.title}</h3>
+              <p class="font-light text-sm/5">{project.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    </div>
+  </Container>
+</section>
+
+<style>
+  .custom-overlay {
+    position: relative;
+  }
+
+  .custom-overlay::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    transition: background-color 0.1s linear;
+  }
+  .custom-overlay:hover::after {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+</style>

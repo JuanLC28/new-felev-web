@@ -3,22 +3,46 @@ import Container from './Container.astro';
 
 const projects = [
   {
-    title: 'Página Web para PMI Lima, Perú',
-    description:
-      'Desarrollamos una página web moderna y funcional para PMI Lima, enfocada en facilitar el acceso a la información sobre sus eventos y servicios.',
-    image: '/images/pagina-web-pmi-lima-peru.jpg',
+    title: 'Página Web para Mundo Tesis',
+    description: [
+      'Se desarrolló una página web para Mundo Tesis que proporciona información detallada sobre sus cursos de investigación científica con Inteligencia Artificial.',
+      'La página incluye temarios, fechas, beneficios y todo lo necesario para que los interesados conozcan los cursos disponibles y lo que aprenderán, facilitando el acceso a esta valiosa oferta educativa.',
+    ],
+    image: '/projects/pagina-web-mundo-tesis.webp',
+    logo: '/images/logo-mundo-tesis.webp',
+    tags: ['Páginas Web'],
   },
   {
-    title: 'Chatbot para PMI Lima, Perú',
-    description:
-      'Implementamos un chatbot en Facebook y WhatsApp para PMI Lima, diseñado para responder preguntas frecuentes y mejorar la atención al cliente.',
-    image: '/images/chatbot-pmi-lima-peru.jpg',
+    title: 'Sitio Web para el LMI: LOAM',
+    description: [
+      'Se desarrolló un sitio web integral para LOAM, el sitio incluye varias secciones que presentan su enfoque innovador en la investigación del cáncer y los virus oncogénicos, así como sus proyectos y banco de datos.',
+      'La plataforma fue diseñada para ser intuitiva y facilitar la actualización de contenidos, brindando acceso claro y organizado a la información clave para investigadores, colaboradores y público en general.',
+    ],
+    image: '/projects/sitio-web-loam.webp',
+    logo: '/images/logo-loam.webp',
+    tags: ['Sitios Web'],
   },
   {
-    title: 'Página Web para LionHungry',
-    description:
-      'Creamos una página web atractiva y fácil de usar para LionHungry, un restaurante especializado en parrillas.',
-    image: '/images/pagina-web-lionhungry.jpg',
+    title: 'Landing Page para el TDD 2024 - PMI Lima Perú',
+    description: [
+      'Se desarrolló una landing page dinámica y visualmente atractiva para la 5ta edición del Think Digital Day (TDD), organizado por el PMI Lima Perú Chapter.',
+      'La página fue diseñada para ofrecer una experiencia de usuario fluida, destacando funciones clave como la compra de entradas, la información sobre los ponentes, y un cronómetro de cuenta regresiva para generar expectativa.',
+      'También incluyó detalles sobre las modalidades de participación y beneficios exclusivos, proporcionando una plataforma completa que facilitó el registro y promoción del evento, dirigido a profesionales del ámbito tecnológico y de agilidad.',
+    ],
+    image: '/projects/landing-page-pmi-lima-peru-chapter.webp',
+    logo: '/images/logo-pmi-lima-peru.webp',
+    tags: ['Sitios Web'],
+  },
+  {
+    title: 'Chatbot para PMI Lima Perú Chapter - Asistente Virtual "Tito"',
+    description: [
+      'Se desarrolló un chatbot para el PMI Lima Perú Chapter, disponible a través de WhatsApp y Messenger.',
+      'El chatbot, llamado «Tito», fue diseñado para asistir a los miembros y usuarios interesados en la comunidad, proporcionando respuestas instantáneas sobre temas clave como la membresía, participación en eventos, voluntariado y certificación PMP.',
+      'Con «Tito», el PMI Lima ofrece una herramienta digital eficiente para mejorar la interacción con su comunidad y facilitar el acceso a información relevante en cualquier momento.',
+    ],
+    image: '/projects/chatbot-pmi-lima-peru.webp',
+    logo: '/images/logo-pmi-lima-peru.webp',
+    tags: ['ChatBot', 'WthasApp', 'Facebok'],
   },
 ];
 ---
@@ -26,55 +50,54 @@ const projects = [
 <section id="proyectos" class="bg-white">
   <Container>
     <div class="py-12 px-8 md:p-20 lg:px-5 xl:py-40">
-      <h2 class="text-2xl/6 font-bold text-center mb-3 uppercase">Nuestros Proyectos</h2>
+      <h2 class="text-2xl/6 font-bold text-center mb-3 uppercase">
+        Proyectos Que Hablan por Sí Mismos
+      </h2>
 
-    <p class="text-center font-light text-sm mb-7">
-      Descubre algunos de nuestros proyectos destacados, donde mejoramos la
-      presencia digital de nuestros clientes con soluciones innovadoras en
-      diseño web y chatbots.
-    </p>
+      <p class="text-center font-light text-sm mb-10">
+        Nuestro portafolio es el reflejo de nuestro enfoque en calidad, diseño y
+        funcionalidad. Echa un vistazo a los proyectos que han ayudado a
+        nuestros clientes a crecer y destacar en un mundo digital cada vez más
+        competitivo.
+      </p>
 
-    <div class="grid auto-rows-fr grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3">
-      {
-        projects.map((project) => (
-          <div class="shadow-xl rounded-2xl overflow-hidden cursor-pointer">
-            <div class="custom-overlay">
-              <img
-                class="w-full aspect-video object-cover"
-                src={project.image}
-                alt={project.title}
-              />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-1 xl:gap-16">
+        {
+          projects.map(({ image, logo, title, description, tags }) => (
+            <div class="shadow-2xl rounded-md grid grid-cols-1 lg:grid-cols-2 bg-fondo-1 overflow-hidden">
+              <div>
+                <img
+                  class="w-full aspect-video object-cover lg:h-full"
+                  src={image}
+                  alt={title}
+                />
+              </div>
+
+              <div class="p-6 xl:p-10">
+                <div class="h-20">
+                  <img class="h-full mx-auto md:m-0" src={logo} />
+                </div>
+
+                <h3 class="mt-4 font-bold text-primary text-lg/tight lg:text-xl/tight mb-2">{title}</h3>
+
+                <div class="mt-3 flex flex-col gap-2">
+                  {description.map((desc) => (
+                    <p class="font-light text-sm/tight">{desc}</p>
+                  ))}
+                </div>
+
+                <div class="mt-4 flex flex-wrap items-center gap-2">
+                  {tags.map((tag) => (
+                    <span class="text-[12px] font-semibold bg-gray-950 text-gray-100 py-1 px-4 rounded-2xl">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-
-            <div class="py-6 px-8">
-              <h3 class="font-bold text-xl mb-2">{project.title}</h3>
-              <p class="font-light text-sm/5">{project.description}</p>
-            </div>
-          </div>
-        ))
-      }
-    </div>
+          ))
+        }
+      </div>
     </div>
   </Container>
 </section>
-
-<style>
-  .custom-overlay {
-    position: relative;
-  }
-
-  .custom-overlay::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    top: 0;
-    left: 0;
-    transition: background-color 0.1s linear;
-  }
-  .custom-overlay:hover::after {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-</style>
