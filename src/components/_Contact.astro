@@ -1,0 +1,120 @@
+---
+import SendIcon from '@icons/Send.astro';
+import PhoneIcon from '@icons/Phone.astro';
+import MailIcon from '@icons/Mail.astro';
+import WatchIcon from '@icons/Watch.astro';
+import Container from './Container.astro';
+---
+
+<section id="contacto" class="bg-fondo-1">
+  <Container>
+    <div
+      class="py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 md:p-20 lg:px-5 xl:py-40 xl:gap-16"
+    >
+      <div class="bg-white py-6 px-8 md:px-6 rounded-3xl shadow-2xl">
+        <h2 class="font-semibold text-xl text-center mb-8 md:text-2xl">
+          ¡Déjanos tu mensaje!
+        </h2>
+
+        <form class="flex flex-col gap-8">
+          <div>
+            <input
+              class="border-b w-full py-2 px-4 outline-none placeholder:text-gray-500/60"
+              type="text"
+              placeholder="Nombre"
+            />
+          </div>
+
+          <div>
+            <input
+              class="border-b w-full py-2 px-4 outline-none placeholder:text-gray-500/60"
+              type="text"
+              placeholder="Ingresa tu correo"
+            />
+          </div>
+
+          <div>
+            <input
+              class="border-b w-full py-2 px-4 outline-none placeholder:text-gray-500/60"
+              type="text"
+              placeholder="Teléfono"
+            />
+          </div>
+
+          <div>
+            <textarea
+              class="border-b w-full py-2 px-4 outline-none placeholder:text-gray-500/60 resize-none"
+              rows="5"
+              placeholder="Ingresa tu mensaje"></textarea>
+          </div>
+
+          <div class="flex justify-center items-center">
+            <button
+              type="submit"
+              class="flex items-center gap-3 bg-black hover:bg-gray-700 text-white py-3 px-10 rounded-4xl cursor-pointer shadow-lg"
+              ><SendIcon width="20" />Enviar mensaje</button
+            >
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <h2 class="font-bold text-2xl uppercase text-center mb-3 md:text-left">
+          Envía tu consulta
+        </h2>
+
+        <p class="text-sm font-light text-center mb-8 md:text-left">
+          Si tienes preguntas sobre nuestros servicios o deseas iniciar un
+          proyecto, no dudes en ponerte en contacto con nosotros.
+        </p>
+
+        <div class="flex flex-col gap-12">
+          <div class="flex flex-col gap-3">
+            <div class="flex justify-center items-center">
+              <a
+                class="text-primary hover:text-black"
+                href="https://wa.me/51981219261"
+                target="_blank"><PhoneIcon width="35" /></a
+              >
+            </div>
+
+            <div class="text-center">
+              <p class="font-light">Contáctanos al</p>
+              <p class="font-semibold">+51 981 219 261</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <div class="flex justify-center items-center">
+              <a
+                class="text-primary hover:text-black"
+                href="contacto@felev.net"
+                target="_blank"><MailIcon width="35" /></a
+              >
+            </div>
+
+            <div class="text-center">
+              <p class="font-light">Escríbenos a</p>
+              <p class="font-semibold">contacto@felev.net</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <div class="flex justify-center items-center">
+              <a
+                class="text-primary hover:text-black"
+                href="https://www.facebook.com/felev.agencia"
+                target="_blank"><WatchIcon width="35" /></a
+              >
+            </div>
+
+            <div class="text-center">
+              <p class="font-light">Horario de atención</p>
+              <p class="font-semibold">Lunes a Sábado, 9 AM a 8 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

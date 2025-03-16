@@ -4,72 +4,105 @@ import PhoneIcon from '@icons/Phone.astro';
 import MailIcon from '@icons/Mail.astro';
 import WatchIcon from '@icons/Watch.astro';
 import Container from './Container.astro';
+import UserForm from '@icons/UserForm.astro';
+import MailForm from '@icons/MailForm.astro';
+import PhoneForm from '@icons/PhoneForm.astro';
+import MessageForm from '@icons/MessageForm.astro';
 ---
 
 <section id="contacto" class="bg-fondo-1">
   <Container>
     <div
-      class="py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 md:p-20 lg:px-5 xl:py-40 xl:gap-16"
+      class="py-16 px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-8 md:p-20 lg:px-5 xl:py-40 lg:gap-20"
     >
-      <div class="bg-white py-6 px-8 md:px-6 rounded-3xl shadow-2xl">
-        <h2 class="font-semibold text-xl text-center mb-8 md:text-2xl">
-          ¡Déjanos tu mensaje!
+      <div class="bg-white p-6 md:px-6 rounded-3xl shadow-2xl order-2 md:order-none">
+        <h2 class="font-semibold text-xl font-quicksand text-center mb-8 md:text-2xl">
+          ¡Ponte en contacto con nosotros!
         </h2>
 
         <form class="flex flex-col gap-8">
-          <div>
+          <div class="relative">
             <input
-              class="border-b w-full py-2 px-4 outline-none placeholder:text-gray-500/60"
+              class="peer border font-quicksand border-gray-950/50 w-full py-2 px-4 pl-10 text-sm placeholder:text-sm outline-none placeholder:text-gray-500/60 focus:border-primary focus:ring-1 focus:ring-primary focus:text-primary focus:placeholder:text-primary font-semibold placeholder:font-normal rounded-md"
               type="text"
               placeholder="Nombre"
             />
+
+            <span
+              class="absolute top-1/2 -translate-y-1/2 left-3 text-black peer-focus:text-primary"
+            >
+              <UserForm width="15" />
+            </span>
           </div>
 
-          <div>
+          <div class="relative">
             <input
-              class="border-b w-full py-2 px-4 outline-none placeholder:text-gray-500/60"
+              class="peer border font-quicksand border-gray-950/50 w-full py-2 px-4 pl-10 text-sm placeholder:text-sm outline-none placeholder:text-gray-500/60 focus:border-primary focus:ring-1 focus:ring-primary focus:text-primary focus:placeholder:text-primary font-semibold placeholder:font-normal rounded-md"
               type="text"
-              placeholder="Ingresa tu correo"
+              placeholder="Ingresa tu email"
             />
+
+            <span
+              class="absolute top-1/2 -translate-y-1/2 left-3 text-black peer-focus:text-primary"
+            >
+              <MailForm width="15" />
+            </span>
           </div>
 
-          <div>
+          <div class="relative">
             <input
-              class="border-b w-full py-2 px-4 outline-none placeholder:text-gray-500/60"
+              class="peer border font-quicksand border-gray-950/50 w-full py-2 px-4 pl-10 text-sm placeholder:text-sm outline-none placeholder:text-gray-500/60 focus:border-primary focus:ring-1 focus:ring-primary focus:text-primary focus:placeholder:text-primary font-semibold placeholder:font-normal rounded-md"
               type="text"
               placeholder="Teléfono"
             />
+
+            <span
+              class="absolute top-1/2 -translate-y-1/2 left-3 text-black peer-focus:text-primary"
+            >
+              <PhoneForm width="20" />
+            </span>
+          </div>
+
+          <div class="relative">
+            <textarea
+              class="peer border font-quicksand border-gray-950/50 w-full py-2 px-4 pl-10 text-sm placeholder:text-sm outline-none placeholder:text-gray-500/60 resize-none focus:border-primary focus:ring-1 focus:ring-primary focus:text-primary focus:placeholder:text-primary font-semibold placeholder:font-normal rounded-md"
+              rows="5"
+              placeholder="Ingresa tu mensaje"></textarea>
+
+            <span
+              class="absolute top-3 left-3 text-black peer-focus:text-primary"
+            >
+              <MessageForm width="15" />
+            </span>
           </div>
 
           <div>
-            <textarea
-              class="border-b w-full py-2 px-4 outline-none placeholder:text-gray-500/60 resize-none"
-              rows="5"
-              placeholder="Ingresa tu mensaje"></textarea>
-          </div>
-
-          <div class="flex justify-center items-center">
             <button
               type="submit"
-              class="flex items-center gap-3 bg-black hover:bg-gray-700 text-white py-3 px-10 rounded-4xl cursor-pointer shadow-lg"
+              class="flex justify-center font-quicksand items-center gap-4 bg-primary hover:bg-primary-hover text-white w-full py-3 font-semibold rounded-4xl cursor-pointer shadow-lg outline-none"
               ><SendIcon width="20" />Enviar mensaje</button
             >
           </div>
         </form>
       </div>
 
-      <div>
-        <h2 class="font-bold text-2xl uppercase text-center mb-3 md:text-left">
-          Envía tu consulta
+      <div class="self-center 2xl:pl-20">
+        <div class="flex justify-center lg:justify-start">
+          <span
+            class="font-normal text-primary font-quicksand text-base bg-white py-2 px-4 rounded-lg"
+          >
+            ¡Contáctanos ahora!
+          </span>
+        </div>
+
+        <p class="mt-6 text-2xl font-light font-quicksand text-center lg:text-left">¿Tienes preguntas?</p>
+
+        <h2 class="mt-3 font-semibold font-poppins text-primary text-3xl text-center lg:text-left">
+          ¡Estamos listos para ayudarte!
         </h2>
 
-        <p class="text-sm font-light text-center mb-8 md:text-left">
-          Si tienes preguntas sobre nuestros servicios o deseas iniciar un
-          proyecto, no dudes en ponerte en contacto con nosotros.
-        </p>
-
-        <div class="flex flex-col gap-12">
-          <div class="flex flex-col gap-3">
+        <div class="mt-10 flex flex-col gap-8 lg:gap-12">
+          <div class="flex flex-col gap-3 lg:flex-row lg:gap-6">
             <div class="flex justify-center items-center">
               <a
                 class="text-primary hover:text-black"
@@ -78,13 +111,13 @@ import Container from './Container.astro';
               >
             </div>
 
-            <div class="text-center">
-              <p class="font-light">Contáctanos al</p>
-              <p class="font-semibold">+51 981 219 261</p>
+            <div class="text-center lg:text-left">
+              <p class="font-light font-quicksand">Contáctanos al</p>
+              <p class="font-semibold font-quicksand">+51 981 219 261</p>
             </div>
           </div>
 
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 lg:flex-row lg:gap-6">
             <div class="flex justify-center items-center">
               <a
                 class="text-primary hover:text-black"
@@ -93,13 +126,13 @@ import Container from './Container.astro';
               >
             </div>
 
-            <div class="text-center">
-              <p class="font-light">Escríbenos a</p>
-              <p class="font-semibold">contacto@felev.net</p>
+            <div class="text-center lg:text-left">
+              <p class="font-light font-quicksand">Escríbenos a</p>
+              <p class="font-semibold font-quicksand">contacto@felev.net</p>
             </div>
           </div>
 
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 lg:flex-row lg:gap-6">
             <div class="flex justify-center items-center">
               <a
                 class="text-primary hover:text-black"
@@ -108,9 +141,9 @@ import Container from './Container.astro';
               >
             </div>
 
-            <div class="text-center">
-              <p class="font-light">Horario de atención</p>
-              <p class="font-semibold">Lunes a Sábado, 9 AM a 8 PM</p>
+            <div class="text-center lg:text-left">
+              <p class="font-light font-quicksand">Horario de atención</p>
+              <p class="font-semibold font-quicksand">Lunes a Sábado, 9 AM a 8 PM</p>
             </div>
           </div>
         </div>

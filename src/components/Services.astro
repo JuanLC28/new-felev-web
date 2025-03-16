@@ -80,17 +80,23 @@ const servicios = [
 <section id="servicios" class="bg-primary">
   <Container>
     <div class="py-12 px-8 md:p-20 lg:px-5">
-      <h2 class="text-white text-center text-2xl font-bold uppercase mb-3">
+      <h2
+        class="text-white text-center font-poppins text-2xl font-bold uppercase mb-3"
+      >
         Nuestros servicios
       </h2>
 
-      <p class="text-white text-center font-light text-sm mb-8 md:text-base">
+      <p
+        class="text-white text-center font-quicksand font-light text-sm mb-8 md:text-base"
+      >
         En <strong class="font-semibold">Felev</strong>, diseñamos sitios web
         atractivos y optimizados, y creamos chatbots personalizados para mejorar
         la comunicación con tus clientes y potenciar tu presencia digital.
       </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-4 lg:grid-cols-3">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 auto-rows-fr gap-4 lg:grid-cols-3"
+      >
         {
           servicios.map((servicio) => (
             <div class="w-full flex flex-col justify-center border border-white rounded-2xl px-5 py-8 text-white relative overflow-hidden cursor-pointer card-services">
@@ -98,19 +104,23 @@ const servicios = [
                 <servicio.icon width="45" />
               </div>
 
-              <h3 class="text-2xl/7 font-bold mb-2">{servicio.title}</h3>
+              <h3 class="text-2xl/7 font-poppins font-bold mb-2">
+                {servicio.title}
+              </h3>
 
-              <p class="font-light text-base/5">{servicio.description}</p>
+              <p class="font-light font-quicksand text-base/5">
+                {servicio.description}
+              </p>
 
               <div class="absolute w-full h-full bg-white left-0 flex flex-col justify-center items-center gap-6 p-5 transition-transform card-services-back">
-                <h4 class="text-black text-2xl/6 font-bold text-center">
+                <h4 class="text-black text-2xl/6 font-poppins font-bold text-center">
                   {servicio.backTitle}
                 </h4>
-                <p class="text-black font-light text-center text-base/5">
+                <p class="text-black font-light font-quicksand text-center text-base/5">
                   {servicio.backDescription}
                 </p>
                 <a
-                  class="bg-black hover:bg-gray-700 text-center text-sm shadow-xl py-3 px-8 rounded-xl font-semibold"
+                  class="bg-black hover:bg-gray-700 text-center font-quicksand text-sm shadow-xl py-3 px-8 rounded-xl font-semibold"
                   href="#"
                 >
                   {servicio.backCta}
